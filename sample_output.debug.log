@@ -1,0 +1,326 @@
+Julia Version 1.10.3
+Commit 0b4590a550 (2024-04-30 10:59 UTC)
+Build Info:
+
+    Note: This is an unofficial build, please report bugs to the project
+    responsible for this build and not to the Julia project unless you can
+    reproduce the issue using official builds available at https://julialang.org/downloads
+
+Platform Info:
+  OS: Linux (x86_64-linux-gnu)
+  CPU: 16 × AMD Ryzen 7 3700X 8-Core Processor
+  WORD_SIZE: 64
+  LIBM: libopenlibm
+  LLVM: libLLVM-15.0.7 (ORCJIT, znver2)
+Threads: 1 default, 0 interactive, 1 GC (on 16 virtual cores)
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/NLopt_jll/jzwIp_3juyN.so for NLopt_jll [079eb43e-fd8e-5478-9966-2cf3e3edb778]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/NLopt/faRdv_3juyN.so for NLopt [76087f3c-5699-56af-9a33-bf431cd00edd]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/FastGaussQuadrature/vg51R_3juyN.so for FastGaussQuadrature [442a2c76-b920-505d-bb47-c5924d526838]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/AbstractFFTs/Di3HZ_3juyN.so for AbstractFFTs [621f4979-c628-5d54-868e-fcf4e3e8185c]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/AbstractFFTsChainRulesCoreExt/g4vnt_3juyN.so for AbstractFFTsChainRulesCoreExt [07c0d231-1838-56d6-9ec8-835e5b9b958e]
+└ @ Base loading.jl:1057
+┌ Debug: Extension AbstractFFTsChainRulesCoreExt of AbstractFFTs loaded
+└ @ Base loading.jl:1296
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/AbstractFFTsTestExt/Pr5Et_3juyN.so for AbstractFFTsTestExt [f14dd36e-a047-53ac-8286-f8b5d0265aae]
+└ @ Base loading.jl:1057
+┌ Debug: Extension AbstractFFTsTestExt of AbstractFFTs loaded
+└ @ Base loading.jl:1296
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/FFTW_jll/9AVlm_3juyN.so for FFTW_jll [f5851436-0d7a-5f13-b9de-f02708fd171a]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/FFTW/PvIn2_3juyN.so for FFTW [7a1cc6ca-52ef-59f5-83cd-3a7055c09341]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/Polynomials/OaK78_3juyN.so for Polynomials [f27b6e38-b328-58d1-80ce-0feddd5e7a45]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/PolynomialsChainRulesCoreExt/Q9QWh_3juyN.so for PolynomialsChainRulesCoreExt [f5ad5175-ea71-5bad-b0d8-3d77b6894ccb]
+└ @ Base loading.jl:1057
+┌ Debug: Extension PolynomialsChainRulesCoreExt of Polynomials loaded
+└ @ Base loading.jl:1296
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/QuadGK/hq5Ol_3juyN.so for QuadGK [1fd47b50-473d-5c70-9696-f719f8f3bcdc]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/Memoize/HGnX1_3juyN.so for Memoize [c03570c3-d221-55d1-a50c-7939bbd78826]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/Calculus/G3wEN_3juyN.so for Calculus [49dc2e85-a5d0-5ad3-a950-438e2897f1b9]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/DualNumbers/5Lxid_3juyN.so for DualNumbers [fa6b7ba4-c1ee-5f82-b5fc-ecf0adba8f74]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/HypergeometricFunctions/tHlAh_3juyN.so for HypergeometricFunctions [34004b35-14d8-5ef3-9330-4cdb6864b03a]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/SpecialPolynomials/LrhA0_3juyN.so for SpecialPolynomials [a25cea48-d430-424a-8ee7-0d3ad3742e9e]
+└ @ Base loading.jl:1057
+┌ Debug: Loading object cache file /home/ilya/.julia/compiled/v1.10/SpecialPolynomialsFastGaussQuadratureExt/S42BU_3juyN.so for SpecialPolynomialsFastGaussQuadratureExt [213242b1-6227-5f03-9555-4fa0214e140e]
+└ @ Base loading.jl:1057
+┌ Debug: Extension SpecialPolynomialsFastGaussQuadratureExt of SpecialPolynomials loaded
+└ @ Base loading.jl:1296
+%% Accuracy of numerical approximations for the ammonia model, Sec. 4.1
+Taylor series convergence radius, 1/√2c = 0.6042103056535397
+┌ Info: Variables domain:
+│   xrange =
+│    101-element LinRange{Float64, Int64}:
+│     -2.0, -1.96, -1.92, -1.88, -1.84, …, 1.8, 1.84, 1.88, 1.92, 1.96, 2.0
+│   wlist =
+│    3-element Vector{Float64}:
+│     0.1
+│     0.6
+└     1.0
+
+Table 2 numerical data in LaTeX format
+------------------------------------------------------------
+\multicolumn{3}{c}{$w=\SI{0.1}{\bohr}$} \\
+GaussHermite & \num{2.9e-17} & \num{8.3e-17} \\
+Taylor & \num{1.8e-12} & \num{5.3e-12} \\
+\multicolumn{3}{c}{$w=\SI{0.6}{\bohr}$} \\
+GaussHermite & \num{3.2e-7} & \num{8.2e-7} \\
+Taylor & \num{0.0021} & \num{0.0062} \\
+\multicolumn{3}{c}{$w=\SI{1.0}{\bohr}$} \\
+GaussHermite & \num{8.8e-5} & \num{0.00019} \\
+Taylor & \num{0.53} & \num{1.5} \\
+------------------------------------------------------------
+
+%% Static limit for the Morse potential, Sec. 4.2
+┌ Debug: Optimizer returned status: :SUCCESS
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/api/methods.jl:71
+┌ Debug: Minimum found:
+│   guess = (q = 1.7857911877713528, w = 0.1)
+│   argmin =
+│    2-element Vector{Float64}:
+│     1.8130344119075708
+│     0.12543115759708856
+│   minf = -0.20205260644744527
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/api/methods.jl:72
+┌ Info: Stationary WP for the TDVP-based model
+│   qmin = 1.8130344119075708
+│   wmin = 0.12543115759708856
+└   Umin = -0.20205260644744527
+
+┌ Debug: Optimizer returned status: :SUCCESS
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/api/methods.jl:71
+┌ Debug: Minimum found:
+│   guess = (q = 1.7857911877713528, w = 0.1)
+│   argmin =
+│    2-element Vector{Float64}:
+│     1.813334797235529
+│     0.1278200999523284
+│   minf = -0.2022123290053574
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/api/methods.jl:72
+┌ Info: Stationary WP for the extended semicalssical model
+│   qmin = 1.813334797235529
+│   wmin = 0.1278200999523284
+└   Umin = -0.2022123290053574
+
+┌ Debug: Verify analytic expression for qmin for U1, Eq. 36: 
+│   qmin_num = 1.813334797235529
+│   qmin_ana = 1.8133347948181213
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_2.jl:23
+
+┌ Info: Stationary WP for Heller's model
+│   qmin = 1.7857911877713528
+│   wmin = 0.1247754145107731
+└   Umin = -0.20200708680357782
+
+┌ Debug: Numerical/analytic wmin: 
+│   wmin_num = 0.1247754145107731
+│   wmin_ana = 0.12477541450266519
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_2.jl:41
+-------------------------------------------------------------------------------------------------------------------
+Global minimum of the full model lies                   1909.3743011248023 cm⁻¹ above the bottom of the well
+Global minimum of the extended semiclassical model lies 1874.3192516066492 cm⁻¹ 
+Global minimum of Heller's model lies                   1919.3647081823956 cm⁻¹ // definition 1: from U1
+                                                        1954.7486953877467 cm⁻¹ // definition 2: from the full U
+The ground vibrational state is at:                     1899.4534706887332 cm⁻¹ 
+-------------------------------------------------------------------------------------------------------------------
+
+
+%% Small-amplitude motion + spectra for the Morse potential, Sec. 4.3
+┌ Info: Solver parameters: 
+└   solver_params = (integrator = Tsit5(; stage_limiter! = trivial_limiter!, step_limiter! = trivial_limiter!, thread = static(false),), abstol = 1.0e-8, reltol = 1.0e-8)
+
+┌ Info: Initial values: 
+└   inicn = (p0 = 0.0, q0 = 1.6, u0 = 0.0, w0 = 0.125, λ0 = 0.0)
+
+┌ Info: The number of t steps, nt = 16384
+│    Time grid parameters:
+│   tspan = (0.0, 66023.49)
+└   dt = 4.03
+
+┌ Info: Initial energy in various definitions
+│   E_cl = -0.19869239571272942
+│   E_hq = -0.1860393633231225
+└   E_sc = -0.18629553969013435
+
+┌ Debug: Effective potential values
+│   Vᴹ.D = 0.2107523558866643
+│   Vᴹ(inicn.q0) = -0.19869239571272942
+│   U(inicn.q0, inicn.w0) = -0.1860393633231225
+│   U_1(inicn.q0, inicn.w0) = -0.18629553969013435
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:45
+Running dynamics...
+  1.314438 seconds (4.91 M allocations: 161.269 MiB, 4.44% gc time, 92.17% compilation time)
+  0.294226 seconds (4.29 M allocations: 77.944 MiB, 4.61% gc time, 56.86% compilation time)
+  0.424905 seconds (8.50 M allocations: 142.983 MiB, 5.55% gc time, 40.17% compilation time)
+
+┌ Debug: Components of the TDVP solution at the end
+│   sol_hq.t[end] = 66023.49
+│   sol_hq[1, end] = -6.238773439317124
+│   sol_hq[2, end] = 1.7093578884303642
+│   sol_hq[3, end] = 2.499966676319106
+│   sol_hq[4, end] = 0.0984739936812565
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:64
+┌ Debug: Online plots of all components of the solution
+│ Drawing 1: p(t)
+│ Drawing 2: q(t)
+│ Drawing 3: u(t)
+│ Drawing 4: w(t)
+│ Drawing 5: λ(t)/t
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:68
+┌ Debug: Drawing 6: Energy components for the TDVP-based dynamics
+│ Drawing 7: Energy components for Heller's dynamics
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:197
+┌ Debug: Drawing 8: Spectrum
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:332
+Expansion of the initial GWP in the egenfunction basis
+┌ Debug: Grid spacing
+│   dx = 0.06614785992217899
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:366
+┌ Debug:  Eigenvalues: 
+│ *   Numerical     Analytic      Δ
+│   hcat(Eᴹ, Eᴹ_ana, Δ) =
+│    24×3 Matrix{Float64}:
+│     -0.202098     -0.202098     -5.55112e-16
+│     -0.185333     -0.185333     -1.66533e-16
+│     -0.169294     -0.169294     -7.21645e-16
+│     -0.153981     -0.153981      5.82867e-16
+│      ⋮                          
+│     -0.00245127   -0.00245127    1.36627e-14
+│     -0.000927851  -0.000927851   6.60236e-15
+│     -0.000130209  -0.000130211   1.48482e-9
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:367
+┌ Debug: Normalization check (numeric) for the normalized initial GWP: 
+│   trapezoidal_rule(abs2.(G0_grid), dx) = 0.9999999999999996
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:375
+┌ Debug: Norm squared of the eigenvectors: 
+│   Ψᴹ_norm2 =
+│    24-element Vector{Float64}:
+│     1.0000000000000004
+│     1.0000000000000007
+│     1.0
+│     1.0000000000000004
+│     ⋮
+│     1.0000000000000004
+│     1.0000000000000007
+│     0.9999999991651354
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:380
+┌ Debug: Expansion weights: 
+│   expansion_weights =
+│    24-element Vector{Float64}:
+│     0.4801306613040487
+│     0.2845458205263831
+│     0.12419946262340785
+│     0.05434801445456063
+│     ⋮
+│     1.7668912468905973e-5
+│     1.0334262205229486e-5
+│     3.770602659666697e-6
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:386
+┌ Debug: Sum of weights (completeness test)
+│   sum(expansion_weights) = 0.9997260034815119
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:387
+┌ Info: Scaled expansion weights (to the first one) 
+│   scaled_expansion_weights =
+│    24-element Vector{Float64}:
+│     1.0
+│     0.5926424689344948
+│     0.2586784653287473
+│     0.11319421739688497
+│     ⋮
+│     3.6800216884538676e-5
+│     2.1523853896689983e-5
+└     7.853284456830213e-6
+
+
+%% Tunneling dynamics in ammonia, Sec. 4.4
+┌ Debug: energy levels
+│   levels =
+│    6-element Vector{Float64}:
+│     0.049960361065510286
+│     0.04996481659210292
+│     0.0541867105259109
+│     0.05435937556691457
+│     0.05725115444194416
+│     0.05854058385078313
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_4.jl:40
+┌ Info: Solver parameters: 
+└   solver_params = (integrator = Tsit5(; stage_limiter! = trivial_limiter!, step_limiter! = trivial_limiter!, thread = static(false),), abstol = 1.0e-12, reltol = 1.0e-12)
+
+┌ Info: Initial values: 
+└   inicn = (p0 = 0.0, q0 = -1.0, u0 = 0.0, w0 = 0.15, λ0 = 0.0)
+
+┌ Debug: Potentials values at initial the configuration: 
+│   Vamm(inicn.q0) = 0.052439218112442815
+│   U(inicn.q0, inicn.w0) = 0.05521888319271428
+│   U_1(inicn.q0, inicn.w0) = 0.05525843140103092
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_4.jl:90
+┌ Info: The number of t steps, nt = 16384
+│    Time grid parameters:
+│   tspan = (0.0, 66023.49)
+└   dt = 4.03
+
+Running dynamics...
+  0.175962 seconds (4.50 M allocations: 76.485 MiB, 8.92% gc time, 30.15% compilation time)
+  0.322992 seconds (11.01 M allocations: 171.873 MiB, 6.61% gc time, 7.67% compilation time)
+
+┌ Warning: Interrupted. Larger maxiters is needed. If you are using an integrator for non-stiff ODEs or an automatic switching algorithm (the default), you may want to consider using a method for stiff equations. See the solver pages for more details (e.g. https://docs.sciml.ai/DiffEqDocs/stable/solvers/ode_solve/#Stiff-Problems).
+└ @ SciMLBase ~/.julia/packages/SciMLBase/hSv8d/src/integrator_interface.jl:597
+  4.614781 seconds (156.00 M allocations: 3.219 GiB, 8.75% gc time, 0.17% compilation time)
+┌ Debug: length of time arrays: 
+│   length(sol_hq.t) = 16384
+│   length(sol_sc.t) = 790
+│   length(sol_hlr.t) = 16384
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_4.jl:129
+┌ Debug: Tunneling in ammonia: all components of the solution
+│ Figure 9: p-dynamics
+│ Figure 10: q-dynamics
+│ Figure 11: u-dynamics
+│ Figure 12: w-dynamics
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_4.jl:155
+
+%% Morse large-amplitude motion and trapping, Sec. 4.5
+┌ Info: Solver parameters: 
+└   solver_params = (integrator = Tsit5(; stage_limiter! = trivial_limiter!, step_limiter! = trivial_limiter!, thread = static(false),), abstol = 1.0e-12, reltol = 1.0e-12)
+
+┌ Info: Initial values: 
+└   inicn = (p0 = 0.0, q0 = 1.4, u0 = 0.0, w0 = 0.125, λ0 = 0.0)
+
+┌ Debug: Potentials at the initial configuration: 
+│   Vᴹ(inicn.q0) = -0.1444128167641099
+│   U(inicn.q0, inicn.w0) = -0.12510267986850968
+│   U_1(inicn.q0, inicn.w0) = -0.12551849073052995
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_5.jl:26
+┌ Info: The number of t steps, nt = 4096
+│    Time grid parameters:
+│   tspan = (0.0, 16502.850000000002)
+└   dt = 4.03
+
+Running dynamics...
+  0.169299 seconds (5.95 M allocations: 91.553 MiB, 12.13% gc time, 1.55% compilation time)
+  0.298370 seconds (10.37 M allocations: 159.111 MiB, 5.14% gc time, 0.94% compilation time)
+
+┌ Warning: Interrupted. Larger maxiters is needed. If you are using an integrator for non-stiff ODEs or an automatic switching algorithm (the default), you may want to consider using a method for stiff equations. See the solver pages for more details (e.g. https://docs.sciml.ai/DiffEqDocs/stable/solvers/ode_solve/#Stiff-Problems).
+└ @ SciMLBase ~/.julia/packages/SciMLBase/hSv8d/src/integrator_interface.jl:597
+  3.844173 seconds (144.00 M allocations: 2.146 GiB, 1.11% gc time)
+┌ Debug: length of time arrays: 
+│   length(sol_hq.t) = 4097
+│   length(sol_sc.t) = 494
+│   length(sol_hlr.t) = 4097
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_5.jl:65
+┌ Debug: Large-amplitude motion in the Morse potential: all components of the solution
+│ Drawing 13: p-dynamics
+│ Drawing 14: q-dynamics
+│ Drawing 15: u-dynamics
+│ Drawing 16: w-dynamics
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_5.jl:91
+
+Hit Enter to continue...
