@@ -75,6 +75,7 @@ PrettyTables
 │   └── wp.jl
 ├── constants.jl
 ├── init.jl
+├── LICENSE
 ├── README.md
 ├── sample_output.debug.log
 ├── sample_output.log
@@ -83,6 +84,8 @@ PrettyTables
 ├── sec_4_3.jl
 ├── sec_4_4.jl
 ├── sec_4_5.jl
+├── sec_A_1.jl
+├── sec_S1.jl
 └── simulations.jl
 ```
 

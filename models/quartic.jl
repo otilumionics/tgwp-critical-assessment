@@ -5,7 +5,7 @@ using Main: Potential
 # Module does not export, only adds methods
 
 # Atomic units here and below
-const m = 5000.0                # Reduced mass, similar to ammonia (not used)
+const m = 4668.0                # Reduced mass, similar to ammonia (not used)
 
 struct QuarticPotential <: Potential
     params::Vector{Float64}
@@ -24,9 +24,9 @@ QuarticPotential() =            # Argument-less constructor with defaults
     QuarticPotential([
         0.05684,                # a0
         0.0,                    # a1*x
-        -0.03501269975576111,   # a2*x²
+       -0.035132518834223594,   # a2*x²
         0.0,                    # a3*x³
-        0.03344550413955791     # a4*x⁴
+        0.03353434564701764     # a4*x⁴
     ])
 
 # Potential & its derivatives

@@ -82,9 +82,9 @@ The ground vibrational state is at:                     1899.4534706887332 cm⁻
 └   E_sc = -0.18629553969013435
 
 Running dynamics...
-  1.297648 seconds (4.91 M allocations: 161.327 MiB, 4.35% gc time, 92.61% compilation time)
-  0.289002 seconds (4.29 M allocations: 77.950 MiB, 4.67% gc time, 56.87% compilation time)
-  0.425615 seconds (8.50 M allocations: 142.905 MiB, 5.48% gc time, 40.51% compilation time)
+  1.278593 seconds (4.91 M allocations: 161.268 MiB, 4.51% gc time, 92.49% compilation time)
+  0.286090 seconds (4.29 M allocations: 77.947 MiB, 4.71% gc time, 57.14% compilation time)
+  0.421470 seconds (8.50 M allocations: 142.907 MiB, 5.54% gc time, 40.01% compilation time)
 
 Expansion of the initial GWP in the egenfunction basis
 ┌ Info: Scaled expansion weights (to the first one) 
@@ -113,12 +113,12 @@ Expansion of the initial GWP in the egenfunction basis
 └   dt = 4.03
 
 Running dynamics...
-  0.163893 seconds (4.50 M allocations: 76.584 MiB, 9.54% gc time, 29.48% compilation time)
-  0.347348 seconds (11.04 M allocations: 173.948 MiB, 6.03% gc time, 11.50% compilation time)
+  0.161700 seconds (4.50 M allocations: 76.584 MiB, 9.65% gc time, 28.72% compilation time)
+  0.338199 seconds (11.04 M allocations: 173.948 MiB, 6.86% gc time, 11.53% compilation time)
 
 ┌ Warning: Interrupted. Larger maxiters is needed. If you are using an integrator for non-stiff ODEs or an automatic switching algorithm (the default), you may want to consider using a method for stiff equations. See the solver pages for more details (e.g. https://docs.sciml.ai/DiffEqDocs/stable/solvers/ode_solve/#Stiff-Problems).
 └ @ SciMLBase ~/.julia/packages/SciMLBase/hSv8d/src/integrator_interface.jl:597
-  4.312968 seconds (156.06 M allocations: 3.223 GiB, 2.31% gc time, 0.47% compilation time)
+  4.251275 seconds (156.06 M allocations: 3.223 GiB, 2.38% gc time, 0.47% compilation time)
 
 %% Morse large-amplitude motion and trapping, Sec. 4.5
 ┌ Info: Solver parameters: 
@@ -133,11 +133,36 @@ Running dynamics...
 └   dt = 4.03
 
 Running dynamics...
-  0.166720 seconds (5.95 M allocations: 91.642 MiB, 12.61% gc time, 3.21% compilation time)
-  0.309274 seconds (10.37 M allocations: 159.201 MiB, 4.86% gc time, 1.87% compilation time)
+  0.157545 seconds (5.95 M allocations: 91.642 MiB, 6.77% gc time, 3.31% compilation time)
+  0.309860 seconds (10.37 M allocations: 159.201 MiB, 6.46% gc time, 1.73% compilation time)
 
 ┌ Warning: Interrupted. Larger maxiters is needed. If you are using an integrator for non-stiff ODEs or an automatic switching algorithm (the default), you may want to consider using a method for stiff equations. See the solver pages for more details (e.g. https://docs.sciml.ai/DiffEqDocs/stable/solvers/ode_solve/#Stiff-Problems).
 └ @ SciMLBase ~/.julia/packages/SciMLBase/hSv8d/src/integrator_interface.jl:597
-  3.826339 seconds (144.00 M allocations: 2.146 GiB, 1.50% gc time)
+  3.826312 seconds (144.00 M allocations: 2.146 GiB, 1.53% gc time)
 
+%% Width dynamics in the ammonia model, Sec. A1
+┌ Info: Solver parameters: 
+└   solver_params = (integrator = Tsit5(; stage_limiter! = trivial_limiter!, step_limiter! = trivial_limiter!, thread = static(false),), abstol = 1.0e-12, reltol = 1.0e-12)
+
+┌ Info: Initial values: 
+└   inicn = (p0 = 0.0, q0 = -0.9, u0 = 0.0, w0 = 0.15, λ0 = 0.0)
+
+┌ Info: The number of t steps, nt = 16384
+│    Time grid parameters:
+│   tspan = (0.0, 66023.49)
+└   dt = 4.03
+
+Running dynamics...
+  0.130216 seconds (5.03 M allocations: 78.841 MiB, 8.53% gc time, 3.96% compilation time)
+  0.282607 seconds (10.20 M allocations: 157.779 MiB, 6.74% gc time, 1.91% compilation time)
+
+  0.148525 seconds (5.18 M allocations: 111.218 MiB, 4.02% gc time)
+
+%% Matching quartic potential to the ammonia model
+┌ Info: Matched parameters for Vq = ax⁴ + bx³ + cx² + dx + e:
+│   a = 0.03353434564701764
+│   b = 0
+│   c = -0.035132518834223594
+│   d = 0
+└   e = 0.05684
 Hit Enter to continue...

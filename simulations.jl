@@ -51,6 +51,8 @@ include("sec_4_2.jl")
 include("sec_4_3.jl")
 include("sec_4_4.jl")
 include("sec_4_5.jl")
+include("sec_A_1.jl")
+include("sec_S1.jl")            # Not included in the manuscript
 
 println("Hit Enter to continue...")
 readline()

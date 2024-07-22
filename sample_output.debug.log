@@ -158,9 +158,9 @@ The ground vibrational state is at:                     1899.4534706887332 cm⁻
 │   U_1(inicn.q0, inicn.w0) = -0.18629553969013435
 └ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_3.jl:45
 Running dynamics...
-  1.314438 seconds (4.91 M allocations: 161.269 MiB, 4.44% gc time, 92.17% compilation time)
-  0.294226 seconds (4.29 M allocations: 77.944 MiB, 4.61% gc time, 56.86% compilation time)
-  0.424905 seconds (8.50 M allocations: 142.983 MiB, 5.55% gc time, 40.17% compilation time)
+  1.275186 seconds (4.91 M allocations: 161.269 MiB, 4.53% gc time, 92.13% compilation time)
+  0.288686 seconds (4.29 M allocations: 77.946 MiB, 4.68% gc time, 57.19% compilation time)
+  0.415921 seconds (8.50 M allocations: 142.905 MiB, 5.67% gc time, 40.45% compilation time)
 
 ┌ Debug: Components of the TDVP solution at the end
 │   sol_hq.t[end] = 66023.49
@@ -269,12 +269,12 @@ Expansion of the initial GWP in the egenfunction basis
 └   dt = 4.03
 
 Running dynamics...
-  0.175962 seconds (4.50 M allocations: 76.485 MiB, 8.92% gc time, 30.15% compilation time)
-  0.322992 seconds (11.01 M allocations: 171.873 MiB, 6.61% gc time, 7.67% compilation time)
+  0.177936 seconds (4.50 M allocations: 76.485 MiB, 10.03% gc time, 30.42% compilation time)
+  0.328835 seconds (11.01 M allocations: 171.871 MiB, 6.62% gc time, 7.58% compilation time)
 
 ┌ Warning: Interrupted. Larger maxiters is needed. If you are using an integrator for non-stiff ODEs or an automatic switching algorithm (the default), you may want to consider using a method for stiff equations. See the solver pages for more details (e.g. https://docs.sciml.ai/DiffEqDocs/stable/solvers/ode_solve/#Stiff-Problems).
 └ @ SciMLBase ~/.julia/packages/SciMLBase/hSv8d/src/integrator_interface.jl:597
-  4.614781 seconds (156.00 M allocations: 3.219 GiB, 8.75% gc time, 0.17% compilation time)
+  4.491441 seconds (156.00 M allocations: 3.219 GiB, 9.12% gc time, 0.18% compilation time)
 ┌ Debug: length of time arrays: 
 │   length(sol_hq.t) = 16384
 │   length(sol_sc.t) = 790
@@ -305,12 +305,12 @@ Running dynamics...
 └   dt = 4.03
 
 Running dynamics...
-  0.169299 seconds (5.95 M allocations: 91.553 MiB, 12.13% gc time, 1.55% compilation time)
-  0.298370 seconds (10.37 M allocations: 159.111 MiB, 5.14% gc time, 0.94% compilation time)
+  0.170512 seconds (5.95 M allocations: 91.553 MiB, 12.94% gc time, 1.60% compilation time)
+  0.296678 seconds (10.37 M allocations: 159.111 MiB, 4.94% gc time, 1.05% compilation time)
 
 ┌ Warning: Interrupted. Larger maxiters is needed. If you are using an integrator for non-stiff ODEs or an automatic switching algorithm (the default), you may want to consider using a method for stiff equations. See the solver pages for more details (e.g. https://docs.sciml.ai/DiffEqDocs/stable/solvers/ode_solve/#Stiff-Problems).
 └ @ SciMLBase ~/.julia/packages/SciMLBase/hSv8d/src/integrator_interface.jl:597
-  3.844173 seconds (144.00 M allocations: 2.146 GiB, 1.11% gc time)
+  3.727761 seconds (144.00 M allocations: 2.146 GiB, 1.19% gc time)
 ┌ Debug: length of time arrays: 
 │   length(sol_hq.t) = 4097
 │   length(sol_sc.t) = 494
@@ -323,4 +323,55 @@ Running dynamics...
 │ Drawing 16: w-dynamics
 └ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_4_5.jl:91
 
+%% Width dynamics in the ammonia model, Sec. A1
+┌ Info: Solver parameters: 
+└   solver_params = (integrator = Tsit5(; stage_limiter! = trivial_limiter!, step_limiter! = trivial_limiter!, thread = static(false),), abstol = 1.0e-12, reltol = 1.0e-12)
+
+┌ Info: Initial values: 
+└   inicn = (p0 = 0.0, q0 = -0.9, u0 = 0.0, w0 = 0.15, λ0 = 0.0)
+
+┌ Debug: Potentials values at initial the configuration: 
+│   Vamm(inicn.q0) = 0.04951572384515447
+│   U(inicn.q0, inicn.w0) = 0.05221847593637782
+│   U_1(inicn.q0, inicn.w0) = 0.052264491531484394
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_A_1.jl:25
+┌ Info: The number of t steps, nt = 16384
+│    Time grid parameters:
+│   tspan = (0.0, 66023.49)
+└   dt = 4.03
+
+Running dynamics...
+  0.129353 seconds (5.03 M allocations: 78.751 MiB, 7.85% gc time, 2.06% compilation time)
+  0.275966 seconds (10.20 M allocations: 157.689 MiB, 6.76% gc time, 1.04% compilation time)
+
+  0.147703 seconds (5.18 M allocations: 111.218 MiB, 3.45% gc time)
+┌ Debug: length of time arrays: 
+│   length(sol_hq.t) = 16384
+│   length(sol_sc.t) = 16384
+│   length(sol_hlr.t) = 16384
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_A_1.jl:64
+┌ Debug: SAM in ammonia: all components of the solution
+│ Figure A1: p-dynamics
+│ Figure A2: q-dynamics
+│ Figure A3: u-dynamics
+│ Figure A4: w-dynamics
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_A_1.jl:90
+
+%% Matching quartic potential to the ammonia model
+┌ Debug: Optimizer returned status: :SUCCESS
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/api/methods.jl:46
+┌ Debug: Minimum found:
+│   guess = 1.0
+│   argmin[1] = 0.723760250866277
+│   minf = 0.04763828563952577
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/api/methods.jl:47
+┌ Info: Matched parameters for Vq = ax⁴ + bx³ + cx² + dx + e:
+│   a = 0.03353434564701764
+│   b = 0
+│   c = -0.035132518834223594
+│   d = 0
+└   e = 0.05684
+┌ Debug: Drawing A5: Model ammonia potential and its quartic approximation
+└ @ Main ~/calc/QuantumComp/Gaussian_WP_dynamics/Julia/code/sec_S1.jl:28
 Hit Enter to continue...
+sys:1: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
