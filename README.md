@@ -108,7 +108,7 @@ julia simulations.jl 2>&1
 
 After execution the sub-directories `./output/data` and
 `./output/figs` will be populated with numerical outputs and plots,
-respectively. There are 7 figures in the paper; all except the 5-th
+respectively. There are 8 figures in the paper; all except the 5-th
 are produced in `EPS` format, the figure 5 is produced as `PDF` to
 support transparency. `EPS` figures can be converged to `PDF` by
 running
